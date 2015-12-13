@@ -9,7 +9,8 @@ install: "pip install -r requirements.txt"
 
 before_script:
   - createuser -U postgres demo
-  - createdb -U demo bitly
+  - createdb -U postgres bitly
+  - psql -c 'GRANT ALL PRIVILEGES ON DATABASE "bitly" to demo;' -U postgres
 
 script: py.test src
 
