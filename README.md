@@ -1,4 +1,7 @@
-Acortador de urls.
+[![Build Status](https://travis-ci.org/alexander-ae/bitly-clon.svg?branch=master)](https://travis-ci.org/alexander-ae/bitly-clon)
+
+Acortador de urls
+=================
 
 Proyecto inspirado en [bitly](https://bitly.com/) implementado en **django** con fines educativos.
 
