@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Nuevo Enlace{% endblock title %}
+
+{% block content %}
+<div>
+    <h1>Nuevo Enlace</h1>
+
+    <form action="#" method='POST'>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit">
+    </form>
+</div>
+{% endblock content %}

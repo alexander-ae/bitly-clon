@@ -19,5 +19,5 @@ from django.conf.urls import url, include
 from shortener import urls as shortener_urls
 
 urlpatterns = [
-    url(r'', include(shortener_urls)),
+    url(r'^links/', include(shortener_urls, namespace='links')),
 ]

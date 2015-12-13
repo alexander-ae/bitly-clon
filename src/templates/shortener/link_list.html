@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Lista de Enlaces{% endblock title %}
+
+{% block content %}
+<div>
+    <h1>Lista de Enlaces</h1>
+    <ul>
+        {% for link in object_list %}
+            <li>
+                <a href="{{ link.get_absolute_url }}">{{ link.url }}</a> - {{ link.short_url }}</li>
+        {% empty %}
+            <li>No hay enlaces aún.</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock content %}
