@@ -17,7 +17,9 @@ Including another URLconf
 
 from django.conf.urls import url, include
 from shortener import urls as shortener_urls
+from redirect import urls as redirect_urls
 
 urlpatterns = [
     url(r'^links/', include(shortener_urls, namespace='links')),
+    url(r'', include(redirect_urls, namespace='redirect')),
 ]

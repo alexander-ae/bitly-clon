@@ -4,11 +4,22 @@
 
 {% block content %}
 <div>
-    <h1>Nuevo Enlace</h1>
+    {% if object.pk %}
+        <h1>Editar Enlace</h1>
+    {% else %}
+        <h1>Nuevo Enlace</h1>
+    {% endif %}
 
     <form action="#" method='POST'>
         {% csrf_token %}
         {{ form.as_p }}
+
+        {% if object.pk %}
+            <span>Enlace corto: </span>
+            <a href="{{ object.short_url }}" target="_blank">{{ object.short_url }}</a>
+            <br><br>
+        {% endif %}
+
         <input type="submit">
     </form>
 </div>
